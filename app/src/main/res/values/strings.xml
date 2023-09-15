@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Campus Discovery</string>
+    <string name="event_date_placeholder">Event Date Placeholder</string>
+    <string name="event_location_placeholder">Event Location Placeholder</string>
+    <string name="event_host_placeholder">Event Host Placeholder</string>
+    <string name="event_description_placeholder">Event Description Placeholder</string>
+    <string name="title_place_holder">Title Place Holder</string>
+    <string name="map_illustration" />
+</resources>

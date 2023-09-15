@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".organizer"
+    android:background="@color/dark_blue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        app:elevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:background="@color/new_blue"
+            android:orientation="horizontal"
+            android:padding="25dp">
+
+            <Button
+                android:id="@+id/dashReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/dark_blue"
+                android:text="Return"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-black"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginRight="20dp"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/orgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Add Invitees"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/invUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/create"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Enter the email associated with the Invitee account."
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/inviteeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:hint="Invitee email address"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/new_blue"
+            android:textColorHint="@color/new_blue"></EditText>
+
+        <Button
+            android:id="@+id/invAddBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/new_blue"
+            android:text="Add Invitee">
+
+        </Button>
+
+        <Button
+            android:id="@+id/addingDone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/new_blue"
+            android:text="Done">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

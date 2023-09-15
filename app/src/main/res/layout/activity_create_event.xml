@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".organizer"
+    android:background="@color/dark_blue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        app:elevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:background="@color/new_blue"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/orgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Create Event"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/returnToDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Return"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/orgHeader"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        tools:ignore="NotSibling" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:background="@drawable/create"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="15sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:hint="Event Title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/new_blue"/>
+
+        <EditText
+            android:id="@+id/eventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:hint="Event Description"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/new_blue"/>
+
+        <EditText
+            android:id="@+id/capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:hint="Event Capacity"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/new_blue"/>
+
+        <Button
+            android:id="@+id/date"
+            android:layout_width="185dp"
+            android:layout_height="50dp"
+            android:onClick="pickDate"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/new_blue" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:backgroundTint="@color/new_blue"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Select Location Below"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/new_blue"/>
+        <Spinner
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5sp"
+            android:background="@android:drawable/btn_dropdown"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:spinnerMode="dropdown"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startTime"
+                android:layout_width="185dp"
+                android:layout_height="50dp"
+                android:onClick="pickStartTime"
+                android:layout_gravity="center"
+                android:layout_margin="10sp"
+                android:backgroundTint="@color/new_blue"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Start Time"
+                android:textColor="@color/white"
+                android:textColorHint="@color/new_blue" />
+
+            <Button
+                android:id="@+id/endTime"
+                android:layout_width="185dp"
+                android:layout_height="50dp"
+                android:onClick="pickEndTime"
+                android:layout_gravity="center"
+                android:layout_margin="10sp"
+                android:backgroundTint="@color/new_blue"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="End Time"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/new_blue" />
+        </LinearLayout>
+
+
+        <Switch
+            android:id="@+id/invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/bright_blue"
+            android:fontFamily="sans-serif-medium"
+            android:switchMinWidth="100dp"
+            android:text="Make event invite only?"
+            android:textColor="@color/dark_blue"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/createBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="145dp"
+            android:backgroundTint="@color/new_blue"
+            android:text="Create">
+
+        </Button>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/invPplText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:fontFamily="sans-serif-medium"
+        android:background="@color/tech_blue"
+        android:text="Add invitees?"
+        android:textAlignment="center"
+        android:textColor="@color/new_blue"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/invButtons"
+        android:visibility="invisible">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/invButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <Button
+            android:id="@+id/addInvBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:backgroundTint="@color/new_blue"
+            android:text="Yes"></Button>
+
+        <Button
+            android:id="@+id/laterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:backgroundTint="@color/new_blue"
+            android:text="Later"></Button>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
